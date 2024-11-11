@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Developer Roadmap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Software Developer Roadmap</h1>
+        <a href="index.html" class="home-link">Back to Home</a>
+    </header>
+
+    <main>
+        <section class="roadmap">
+            <div class="roadmap-container">
+                <!-- Step 1: Learn HTML, CSS, JavaScript -->
+                <div class="roadmap-node" data-step="step1" onclick="openDialog('step1-dialog')">
+                    <span>Learn HTML, CSS, JavaScript</span>
+                </div>
+                <div class="line"></div>
+
+                <!-- Step 2: Version Control Systems (Git) -->
+                <div class="roadmap-node" data-step="step2" onclick="openDialog('step2-dialog')">
+                    <span>Version Control Systems (Git)</span>
+                </div>
+                <div class="line"></div>
+
+                <!-- Step 3: Frontend Frameworks (React, Angular, Vue) -->
+                <div class="roadmap-node" data-step="step3" onclick="openDialog('step3-dialog')">
+                    <span>Frontend Frameworks (React, Angular, Vue)</span>
+                </div>
+                <div class="line"></div>
+
+                <!-- Step 4: Backend Development (Node.js, Express) -->
+                <div class="roadmap-node" data-step="step4" onclick="openDialog('step4-dialog')">
+                    <span>Backend Development (Node.js, Express)</span>
+                </div>
+                <div class="line"></div>
+
+                <!-- Step 5: Databases (SQL, NoSQL) -->
+                <div class="roadmap-node" data-step="step5" onclick="openDialog('step5-dialog')">
+                    <span>Databases (SQL, NoSQL)</span>
+                </div>
+                <div class="line"></div>
+
+                <!-- Step 6: Build Projects and Portfolio -->
+                <div class="roadmap-node" data-step="step6" onclick="openDialog('step6-dialog')">
+                    <span>Build Projects and Portfolio</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overlay for the dialogs -->
+        <div class="dialog-overlay" id="dialog-overlay" onclick="closeAllDialogs()"></div>
+
+        <!-- Dialogs for Each Step -->
+        <div class="roadmap-dialog" id="step1-dialog">
+            <h2>Learn HTML, CSS, JavaScript</h2>
+            <p>This step covers the basics of web development, including HTML for structure, CSS for styling, and JavaScript for interactivity.</p>
+            <h4>YouTube Resources:</h4>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Web Development for Beginners - FreeCodeCamp</a></li>
+                <li><a href="https://www.youtube.com/watch?v=hdI2bqOjy3c" target="_blank">Learn JavaScript - Traversy Media</a></li>
+            </ul>
+            <h4>Study Resources:</h4>
+            <ul>
+                <li><a href="https://www.codecademy.com/learn/learn-html" target="_blank">Codecademy - Learn HTML</a></li>
+                <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">freeCodeCamp - Responsive Web Design</a></li>
+            </ul>
+            <button class="close-dialog" onclick="closeDialog('step1-dialog')">Close</button>
+        </div>
+
+        <div class="roadmap-dialog" id="step2-dialog">
+            <h2>Version Control Systems (Git)</h2>
+            <p>Learn how to use Git for version control. Understand how to commit changes, branch, and merge to collaborate effectively.</p>
+            <h4>YouTube Resources:</h4>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc" target="_blank">Git and GitHub for Beginners - FreeCodeCamp</a></li>
+                <li><a href="https://www.youtube.com/watch?v=H1cM4p82C0g" target="_blank">Learn Git in 15 Minutes - The Net Ninja</a></li>
+            </ul>
+            <h4>Study Resources:</h4>
+            <ul>
+                <li><a href="https://git-scm.com/doc" target="_blank">Official Git Documentation</a></li>
+                <li><a href="https://www.codecademy.com/learn/learn-git" target="_blank">Codecademy - Learn Git</a></li>
+            </ul>
+            <button class="close-dialog" onclick="closeDialog('step2-dialog')">Close</button>
+        </div>
+
+        <div class="roadmap-dialog" id="step3-dialog">
+            <h2>Frontend Frameworks (React, Angular, Vue)</h2>
+            <p>Explore popular frontend frameworks and libraries such as React, Angular, and Vue.js to build dynamic web applications.</p>
+            <h4>YouTube Resources:</h4>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=dGcsHMXbSOA" target="_blank">React JS Crash Course - Traversy Media</a></li>
+                <li><a href="https://www.youtube.com/watch?v=htPYk6QxacQ" target="_blank">Angular Crash Course - Traversy Media</a></li>
+            </ul>
+            <h4>Study Resources:</h4>
+            <ul>
+                <li><a href="https://reactjs.org/docs/getting-started.html" target="_blank">React Official Documentation</a></li>
+                <li><a href="https://angular.io/start" target="_blank">Angular Official Getting Started</a></li>
+                <li><a href="https://vuejs.org/v2/guide/" target="_blank">Vue.js Official Guide</a></li>
+            </ul>
+            <button class="close-dialog" onclick="closeDialog('step3-dialog')">Close</button>
+        </div>
+
+        <div class="roadmap-dialog" id="step4-dialog">
+            <h2>Backend Development (Node.js, Express)</h2>
+            <p>Learn backend development using Node.js and Express to build server-side applications and APIs.</p>
+            <h4>YouTube Resources:</h4>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=TlB_eWDSMt4" target="_blank">Node.js Crash Course - Traversy Media</a></li>
+                <li><a href="https://www.youtube.com/watch?v=L72fsT5z6Rg" target="_blank">Express.js Crash Course - Traversy Media</a></li>
+            </ul>
+            <h4>Study Resources:</h4>
+            <ul>
+                <li><a href="https://nodejs.org/en/docs/" target="_blank">Node.js Official Documentation</a></li>
+                <li><a href="https://expressjs.com/en/starter/installing.html" target="_blank">Express Official Documentation</a></li>
+            </ul>
+            <button class="close-dialog" onclick="closeDialog('step4-dialog')">Close</button>
+        </div>
+
+        <div class="roadmap-dialog" id="step5-dialog">
+            <h2>Databases (SQL, NoSQL)</h2>
+            <p>Understand how to work with databases. Learn the differences between SQL (e.g., PostgreSQL) and NoSQL (e.g., MongoDB) databases.</p>
+            <h4>YouTube Resources:</h4>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=HX6oWm2R0wA" target="_blank">SQL Tutorial - Learn SQL in One Video - FreeCodeCamp</a></li>
+                <li><a href="https://www.youtube.com/watch?v=CS1hU82vX3s" target="_blank">MongoDB Crash Course - Traversy Media</a></li>
+            </ul>
+            <h4>Study Resources:</h4>
+            <ul>
+                <li><a href="https://www.postgresql.org/docs/" target="_blank">PostgreSQL Official Documentation</a></li>
+                <li><a href="https://www.mongodb.com/docs/manual/" target="_blank">MongoDB Official Documentation</a></li>
+            </ul>
+            <button class="close-dialog" onclick="closeDialog('step5-dialog')">Close</button>
+        </div>
+
+        <div class="roadmap-dialog" id="step6-dialog">
+            <h2>Build Projects and Portfolio</h2>
+            <p>Apply your skills by building real-world projects. Create a portfolio to showcase your work to potential employers.</p>
+            <h4>YouTube Resources:</h4>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=3FqLxG6d-94" target="_blank">How to Build a Portfolio - The Net Ninja</a></li>
+            </ul>
+            <h4>Study Resources:</h4>
+            <ul>
+                <li><a href="https://www.codecademy.com/articles/portfolio" target="_blank">Codecademy - How to Build a Portfolio</a></li>
+            </ul>
+            <button class="close-dialog" onclick="closeDialog('step6-dialog')">Close</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Roadmaps for Success</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
