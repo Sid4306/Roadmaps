@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+}
+
+header {
+    background-color: #007bff; /* Green */
+    color: white; /* Text color */
+    padding: 15px; /* Padding */
+    text-align: center; /* Center align text */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Inline list items */
+    margin: 0 15px; /* Margin for spacing */
+}
+
+nav a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.roadmaps {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center the cards */
+    padding: 20px; /* Padding around cards */
+}
+
+.roadmap-card {
+    background-color: white; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin: 15px; /* Margin between cards */
+    padding: 20px; /* Padding inside cards */
+    width: 300px; /* Fixed width for cards */
+    text-align: center; /* Center text */
+    transition: transform 0.2s; /* Transition effect */
+}
+
+.roadmap-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.button {
+    display: inline-block; /* Block display for button */
+    background-color: #007bff; /* Button background */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    margin-top: 10px; /* Margin for spacing */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    padding: 10px 0; /* Padding for footer */
+    background-color: #007bff; /* Footer background */
+    color: white; /* Footer text color */
+}
+
+.home-link {
+    display: inline-block;
+    margin-bottom: 20px; /* Space between header and link */
+    padding: 10px 15px;
+    background-color: #007BFF; /* Primary color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Roadmap Container */
+.roadmap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    width: 80%; /* Limit the container width to keep nodes centered */
+    margin: 50px auto; /* Center the container and add top/bottom spacing */
+}
+
+/* Roadmap Node (now rectangular with rounded edges) */
+.roadmap-node {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 20px; /* Makes the rectangle have rounded edges */
+    width: 200px; /* Adjust the width of the rectangle */
+    height: 100px; /* Adjust the height of the rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    margin: 20px 0; /* Adds vertical space between nodes */
+}
+
+.roadmap-node:hover {
+    transform: scale(1.1);
+}
+
+/* Thin line between nodes */
+.line {
+    width: 2px;
+    height: 60px; /* Adjust the height of the line to properly connect */
+    background-color: #007bff;
+    position: relative;
+    z-index: 0;
+    margin-top: -20px; /* Adjust this to ensure lines start right after nodes */
+    margin-bottom: -20px; /* Ensures line extends to the next node */
+}
+
+/* Dialog box styling */
+.roadmap-dialog {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixes the dialog to the viewport */
+    left: 50%; /* Center the dialog */
+    top: 50%; /* Center the dialog */
+    transform: translate(-50%, -50%); /* Adjust to center */
+    background-color: white; /* Background color */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for elevation */
+    padding: 20px; /* Padding inside the dialog */
+    z-index: 1000; /* Ensure dialog is on top of other content */
+}
+
+.close-dialog {
+    background-color: #f44336; /* Red */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Cursor style on hover */
+    margin-top: 10px; /* Margin for spacing */
+}
+
+.close-dialog:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+.dialog-overlay {
+    display: none; /* Initially hidden */
+    position: fixed; /* Cover the whole viewport */
+    top: 0; /* Start at the top */
+    left: 0; /* Start at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Below dialog but above content */
+}
+
+.roadmap-dialog h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.roadmap-dialog p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.roadmap-dialog .close-dialog {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.roadmap-dialog .close-dialog:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .roadmap-container {
+        flex-direction: column;
+    }
+
+    .roadmap-node {
+        align-self: center;
+    }
+
+    .line {
+        height: 50px;
+        margin: 10px 0;
+    }
+}
+
+
+
+/* About Section */
+
+.about-section {
+    max-width: 800px; /* Max width for content */
+    margin: 20px auto; /* Center the section */
+    padding: 20px; /* Padding around content */
+    background-color: white; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.about-section h2, 
+.about-section h3 {
+    color: #4CAF50; /* Green color for headings */
+}
+
+.about-section p {
+    line-height: 1.6; /* Increase line height for readability */
+}
+
+.about-section ul {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 20px; /* Padding for list */
+}
