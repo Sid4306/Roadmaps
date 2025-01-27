@@ -3,43 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Roadmaps</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Career Roadmaps - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1e2b;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+        }
+        nav {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        }
+        nav a {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        .banner {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #6a11cb;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #2575fc;
+        }
+        .footer {
+            background-color: #10121b;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #2575fc;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Career Roadmaps</h1>
-        <nav>
-            <ul>
-                <li><a href="software-developer.html">Software Developer</a></li>
-                <li><a href="data-scientist.html">Data Scientist</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="roadmaps">
-            <div class="roadmap-card">
-                <h2>Software Developer</h2>
-                <p>Follow this roadmap to become a software developer.</p>
-                <a href="software-developer.html" class="button">View Roadmap</a>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Career Roadmaps</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roadmaps.html">Roadmaps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <div class="roadmap-card">
-                <h2>Data Scientist</h2>
-                <p>Follow this roadmap to become a data scientist.</p>
-                <a href="data-scientist.html" class="button">View Roadmap</a>
-            </div>
-            <!-- Add more roadmap cards as needed -->
-        </section>
-    </main>
+        </div>
+    </nav>
 
-    <footer>
-        <p>Made by Team 7</p>
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Navigate Your Career Path</h1>
+        <p>Discover step-by-step roadmaps tailored for your career goals.</p>
+        <a href="roadmaps.html" class="btn btn-primary">Explore Roadmaps</a>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="container my-5">
+        <div class="row text-center">
+            <h2>Why Choose Us?</h2>
+            <p class="lead">Expertly crafted roadmaps designed with actionable steps and practical resources.</p>
+        </div>
+        <div class="row text-center mt-4">
+            <div class="col-md-4">
+                <h3>Step-by-step Guidance</h3>
+                <p>Comprehensive roadmaps to guide you through essential skills.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Tailored for Your Goals</h3>
+                <p>Customized roadmaps aligned to your career aspirations.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Trusted Resources</h3>
+                <p>Access reliable study materials and industry insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Career Roadmaps. All rights reserved. <a href="#">Privacy Policy</a></p>
     </footer>
-    
-    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2024/10/21/15/20241021154426-WJCXPBYT.js"></script>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
