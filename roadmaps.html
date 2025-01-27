@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Roadmaps - Roadmaps</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1e2b;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+        }
+        nav {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        }
+        nav a {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        .banner {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #6a11cb;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #2575fc;
+        }
+        .footer {
+            background-color: #10121b;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #2575fc;
+        }
+        .roadmap-card {
+            background-color: #2a2d3e;
+            border: none;
+            border-radius: 8px;
+            padding: 20px;
+            color: #e0e0e0;
+            transition: transform 0.3s;
+        }
+        .roadmap-card:hover {
+            transform: scale(1.05);
+            background-color: #343849;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Career Roadmaps</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="roadmaps.html">Roadmaps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Explore Our Roadmaps</h1>
+        <p>Your guide to mastering new skills and achieving career goals.</p>
+    </section>
+
+    <!-- Roadmaps Section -->
+    <section class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card roadmap-card">
+                    <h3>Software Developer</h3>
+                    <p>Master programming languages, algorithms, and software design principles.</p>
+                    <a href="softwaredeveloper.html" class="btn btn-primary">View Roadmap</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card roadmap-card">
+                    <h3>Data Scientist</h3>
+                    <p>Learn data analysis, machine learning, and visualization tools.</p>
+                    <a href="datascientist.html" class="btn btn-primary">View Roadmap</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card roadmap-card">
+                    <h3>Fullstack Developer</h3>
+                    <p>Bridge frontend and backend technologies to build dynamic applications.</p>
+                    <a href="fullstackdeveloper.html" class="btn btn-primary">View Roadmap</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Career Roadmaps. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
