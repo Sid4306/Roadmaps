@@ -4,40 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Career Roadmaps</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1e2b;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+        }
+        nav {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        }
+        nav a {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        .banner {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #6a11cb;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #2575fc;
+        }
+        .footer {
+            background-color: #10121b;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #2575fc;
+        }
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #2a2d3e;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #6a11cb;
+        }
+        h1 {
+            color: #fff;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>About Career Roadmaps</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="software-developer.html">Software Developer</a></li>
-                <li><a href="data-scientist.html">Data Scientist</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Career Roadmaps</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roadmaps.html">Roadmaps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="software-developer.html">Software Developer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data-scientist.html">Data Scientist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <section class="about-section">
-            <h2>Welcome to Career Roadmaps!</h2>
-            <p>This is a Prototype website designed as a proof of concept for an Engineering Design Thinking project.</p>
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>About Us</h1>
+        <p>Learn more about Career Roadmaps</p>
+    </section>
 
-            <h3>This website is a work-in-progress!</h3>
-            <p>We plan to add many more features, and streamline the experience of using the website further.</p>
+    <!-- Content Section -->
+    <section class="container content">
+        <h2>Our Mission</h2>
+        <p>At Career Roadmaps, we are dedicated to helping individuals achieve their career goals by providing clear and comprehensive roadmaps for various professions. Whether you are just starting out or looking to advance your career, our step-by-step guides are designed to provide you with the knowledge and resources needed to succeed.</p>
 
-            <h3>Features: </h3>
-            <ul>
-                <li>We currently have two complete roadmaps for the goals of Software Developer and Data Scientist.</li>
-                <li>An AI chatbot is embedded into the homepage, where users can ask for doubts about their career or questions in general.</li>
-                <li>Community support and resources for learners.</li>
-            </ul>
-        </section>
-    </main>
+        <h2>What We Offer</h2>
+        <p>Our website offers a range of career roadmaps for different fields, including software development, data science, and more. Each roadmap is carefully curated to ensure it includes the most relevant and up-to-date resources, from beginner tutorials to advanced courses. We also provide links to valuable external resources, including online courses, tutorials, and educational websites.</p>
 
-    <footer>
-        <p>Made by Team 7</p>
+        <h2>Why Choose Us</h2>
+        <p>We believe that everyone should have access to high-quality career guidance. Our roadmaps are created by industry professionals with years of experience, ensuring you receive the best advice and resources. We are committed to continuously updating our content to keep up with the latest trends and advancements in each field.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, please feel free to reach out to us. We are always here to help you on your career journey. You can contact us at <a href="https://vardhaman.org">Test Link</a>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Career Roadmaps. All rights reserved. <a href="#">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
