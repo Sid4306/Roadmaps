@@ -3,159 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Developer Roadmap</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Career Roadmaps - Software Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1e2b;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+        }
+        nav {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        }
+        nav a {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        .banner {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #6a11cb;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #2575fc;
+        }
+        .footer {
+            background-color: #10121b;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #2575fc;
+        }
+        .roadmap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        .step {
+            background-color: #2a2d3e;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .step:hover {
+            transform: scale(1.05);
+            background-color: #343849;
+        }
+        .popup {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: 90%;
+            max-width: 600px;
+            background-color: #2a2d3e;
+            color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        .popup h3 {
+            color: #6a11cb;
+        }
+        .popup a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+        .popup a:hover {
+            color: #2575fc;
+        }
+        .popup .btn {
+            display: block;
+            margin: 20px auto 0;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            display: none;
+        }
+        .popup-content {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Software Developer Roadmap</h1>
-        <a href="index.html" class="home-link">Back to Home</a>
-    </header>
-
-    <main>
-        <section class="roadmap">
-            <div class="roadmap-container">
-                <!-- Step 1: Learn HTML, CSS, JavaScript -->
-                <div class="roadmap-node" data-step="step1" onclick="openDialog('step1-dialog')">
-                    <span>Learn HTML, CSS, JavaScript</span>
-                </div>
-                <div class="line"></div>
-
-                <!-- Step 2: Version Control Systems (Git) -->
-                <div class="roadmap-node" data-step="step2" onclick="openDialog('step2-dialog')">
-                    <span>Version Control Systems (Git)</span>
-                </div>
-                <div class="line"></div>
-
-                <!-- Step 3: Frontend Frameworks (React, Angular, Vue) -->
-                <div class="roadmap-node" data-step="step3" onclick="openDialog('step3-dialog')">
-                    <span>Frontend Frameworks (React, Angular, Vue)</span>
-                </div>
-                <div class="line"></div>
-
-                <!-- Step 4: Backend Development (Node.js, Express) -->
-                <div class="roadmap-node" data-step="step4" onclick="openDialog('step4-dialog')">
-                    <span>Backend Development (Node.js, Express)</span>
-                </div>
-                <div class="line"></div>
-
-                <!-- Step 5: Databases (SQL, NoSQL) -->
-                <div class="roadmap-node" data-step="step5" onclick="openDialog('step5-dialog')">
-                    <span>Databases (SQL, NoSQL)</span>
-                </div>
-                <div class="line"></div>
-
-                <!-- Step 6: Build Projects and Portfolio -->
-                <div class="roadmap-node" data-step="step6" onclick="openDialog('step6-dialog')">
-                    <span>Build Projects and Portfolio</span>
-                </div>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Career Roadmaps</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roadmaps.html">Roadmaps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Software Developer</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Overlay for the dialogs -->
-        <div class="dialog-overlay" id="dialog-overlay" onclick="closeAllDialogs()"></div>
-
-        <!-- Dialogs for Each Step -->
-        <div class="roadmap-dialog" id="step1-dialog">
-            <h2>Learn HTML, CSS, JavaScript</h2>
-            <p>This step covers the basics of web development, including HTML for structure, CSS for styling, and JavaScript for interactivity.</p>
-            <h4>YouTube Resources:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Web Development for Beginners - FreeCodeCamp</a></li>
-                <li><a href="https://www.youtube.com/watch?v=hdI2bqOjy3c" target="_blank">Learn JavaScript - Traversy Media</a></li>
-            </ul>
-            <h4>Study Resources:</h4>
-            <ul>
-                <li><a href="https://www.codecademy.com/learn/learn-html" target="_blank">Codecademy - Learn HTML</a></li>
-                <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">freeCodeCamp - Responsive Web Design</a></li>
-            </ul>
-            <button class="close-dialog" onclick="closeDialog('step1-dialog')">Close</button>
         </div>
+    </nav>
 
-        <div class="roadmap-dialog" id="step2-dialog">
-            <h2>Version Control Systems (Git)</h2>
-            <p>Learn how to use Git for version control. Understand how to commit changes, branch, and merge to collaborate effectively.</p>
-            <h4>YouTube Resources:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc" target="_blank">Git and GitHub for Beginners - FreeCodeCamp</a></li>
-                <li><a href="https://www.youtube.com/watch?v=H1cM4p82C0g" target="_blank">Learn Git in 15 Minutes - The Net Ninja</a></li>
-            </ul>
-            <h4>Study Resources:</h4>
-            <ul>
-                <li><a href="https://git-scm.com/doc" target="_blank">Official Git Documentation</a></li>
-                <li><a href="https://www.codecademy.com/learn/learn-git" target="_blank">Codecademy - Learn Git</a></li>
-            </ul>
-            <button class="close-dialog" onclick="closeDialog('step2-dialog')">Close</button>
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Software Developer Roadmap</h1>
+        <p>Follow the steps to become a proficient software developer.</p>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="container roadmap">
+        <div class="step" onclick="showResources('Step 1: Learn Programming Basics', 'https://www.learnpython.org/', 'https://www.codecademy.com/learn/learn-python-3')">
+            Step 1: Learn Programming Basics
         </div>
-
-        <div class="roadmap-dialog" id="step3-dialog">
-            <h2>Frontend Frameworks (React, Angular, Vue)</h2>
-            <p>Explore popular frontend frameworks and libraries such as React, Angular, and Vue.js to build dynamic web applications.</p>
-            <h4>YouTube Resources:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=dGcsHMXbSOA" target="_blank">React JS Crash Course - Traversy Media</a></li>
-                <li><a href="https://www.youtube.com/watch?v=htPYk6QxacQ" target="_blank">Angular Crash Course - Traversy Media</a></li>
-            </ul>
-            <h4>Study Resources:</h4>
-            <ul>
-                <li><a href="https://reactjs.org/docs/getting-started.html" target="_blank">React Official Documentation</a></li>
-                <li><a href="https://angular.io/start" target="_blank">Angular Official Getting Started</a></li>
-                <li><a href="https://vuejs.org/v2/guide/" target="_blank">Vue.js Official Guide</a></li>
-            </ul>
-            <button class="close-dialog" onclick="closeDialog('step3-dialog')">Close</button>
+        <div class="step" onclick="showResources('Step 2: Master HTML & CSS', 'https://developer.mozilla.org/en-US/docs/Web/HTML', 'https://www.freecodecamp.org/learn/responsive-web-design/')">
+            Step 2: Master HTML & CSS
         </div>
-
-        <div class="roadmap-dialog" id="step4-dialog">
-            <h2>Backend Development (Node.js, Express)</h2>
-            <p>Learn backend development using Node.js and Express to build server-side applications and APIs.</p>
-            <h4>YouTube Resources:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=TlB_eWDSMt4" target="_blank">Node.js Crash Course - Traversy Media</a></li>
-                <li><a href="https://www.youtube.com/watch?v=L72fsT5z6Rg" target="_blank">Express.js Crash Course - Traversy Media</a></li>
-            </ul>
-            <h4>Study Resources:</h4>
-            <ul>
-                <li><a href="https://nodejs.org/en/docs/" target="_blank">Node.js Official Documentation</a></li>
-                <li><a href="https://expressjs.com/en/starter/installing.html" target="_blank">Express Official Documentation</a></li>
-            </ul>
-            <button class="close-dialog" onclick="closeDialog('step4-dialog')">Close</button>
+        <div class="step" onclick="showResources('Step 3: Learn JavaScript', 'https://javascript.info/', 'https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/')">
+            Step 3: Learn JavaScript
         </div>
-
-        <div class="roadmap-dialog" id="step5-dialog">
-            <h2>Databases (SQL, NoSQL)</h2>
-            <p>Understand how to work with databases. Learn the differences between SQL (e.g., PostgreSQL) and NoSQL (e.g., MongoDB) databases.</p>
-            <h4>YouTube Resources:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=HX6oWm2R0wA" target="_blank">SQL Tutorial - Learn SQL in One Video - FreeCodeCamp</a></li>
-                <li><a href="https://www.youtube.com/watch?v=CS1hU82vX3s" target="_blank">MongoDB Crash Course - Traversy Media</a></li>
-            </ul>
-            <h4>Study Resources:</h4>
-            <ul>
-                <li><a href="https://www.postgresql.org/docs/" target="_blank">PostgreSQL Official Documentation</a></li>
-                <li><a href="https://www.mongodb.com/docs/manual/" target="_blank">MongoDB Official Documentation</a></li>
-            </ul>
-            <button class="close-dialog" onclick="closeDialog('step5-dialog')">Close</button>
+        <div class="step" onclick="showResources('Step 4: Explore Frontend Frameworks', 'https://reactjs.org/', 'https://www.udemy.com/course/react-the-complete-guide/')">
+            Step 4: Explore Frontend Frameworks
         </div>
-
-        <div class="roadmap-dialog" id="step6-dialog">
-            <h2>Build Projects and Portfolio</h2>
-            <p>Apply your skills by building real-world projects. Create a portfolio to showcase your work to potential employers.</p>
-            <h4>YouTube Resources:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=3FqLxG6d-94" target="_blank">How to Build a Portfolio - The Net Ninja</a></li>
-            </ul>
-            <h4>Study Resources:</h4>
-            <ul>
-                <li><a href="https://www.codecademy.com/articles/portfolio" target="_blank">Codecademy - How to Build a Portfolio</a></li>
-            </ul>
-            <button class="close-dialog" onclick="closeDialog('step6-dialog')">Close</button>
+        <div class="step" onclick="showResources('Step 5: Learn Backend Development', 'https://nodejs.org/en/', 'https://www.freecodecamp.org/learn/back-end-development-and-apis/')">
+            Step 5: Learn Backend Development
         </div>
-    </main>
+        <div class="step" onclick="showResources('Step 6: Understand Databases', 'https://www.mongodb.com/', 'https://www.coursera.org/learn/introduction-to-mongodb/')">
+            Step 6: Understand Databases
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Roadmaps for Success</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Career Roadmaps. All rights reserved. <a href="#">Privacy Policy</a></p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="popup">
+        <h3 id="popup-title"></h3>
+        <div class="popup-content">
+            <p>Explore the following resources:</p>
+            <p><strong>YouTube Resource:</strong> <a id="youtube-link" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+            <p><strong>Study Resource:</strong> <a id="study-link" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+        </div>
+        <button class="btn btn-primary" onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function showResources(step, youtubeLink, studyLink) {
+            document.getElementById('popup-title').innerText = step;
+            document.getElementById('youtube-link').href = youtubeLink;
+            document.getElementById('youtube-link').innerText = youtubeLink;
+            document.getElementById('study-link').href = studyLink;
+            document.getElementById('study-link').innerText = studyLink;
+            document.querySelector('.popup').style.display = 'block';
+            document.querySelector('.overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.querySelector('.popup').style.display = 'none';
+            document.querySelector('.overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
